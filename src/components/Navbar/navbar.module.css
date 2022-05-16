@@ -1,0 +1,16 @@
+.navbar {
+  height: 84px;
+  background-color: #EFF5F8;
+  @apply fixed w-full bg-opacity-80 bottom-0 grid grid-flow-col justify-between px-7;
+}
+
+.addBtn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  font-size: 64px;
+  line-height: 58px;
+  color: white;
+  transform: translateY(-29px);
+  @apply bg-primary font-light;
+}
