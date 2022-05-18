@@ -10,7 +10,9 @@ function App() {
     <div className="bg-dark-bg min-h-screen">
       <div className="logo"></div>
       <ToggleBtn />
-      <Calendar />
+      <div className="px-8">
+        <Calendar />
+      </div>
       <div className="filter"></div>
       <div className="list text-big"></div>
       {openAddModal && <AddModal />}

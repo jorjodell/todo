@@ -1,7 +1,23 @@
 .calendar {
-  @apply text-white;
+  @apply text-white font-semibold pt-4;
 }
 
-.week {
-  
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 27px);
+  justify-content: space-between;
+  row-gap: 10px;
+  grid-auto-rows: 27px;
+  @apply px-4;
+}
+
+.day {
+  line-height: 27px;
+  text-align: center;
+}
+
+.today {
+  background-color: #6670FF;
+  color: white;
+  border-radius: 50%;
 }

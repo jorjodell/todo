@@ -8,8 +8,6 @@ const AddModal = () => {
     console.log(data)
   }
 
-  console.log(errors);
-
   return (
     <div className="modal">
       <section className="modal-box">
