@@ -8,6 +8,7 @@ module.exports = {
       black: '#050505',
       'dark-bg': '#140A26',
       error: '#FF5C5C',
+      white: '#FFFFFF',
     },
     extend: {},
   },
