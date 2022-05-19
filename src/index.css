@@ -20,14 +20,17 @@
 
 @layer components {
   .modal {
-    background-color: #4D4D4D;
-    @apply bg-opacity-50 h-screen fixed grid items-center w-full px-5;
+    @apply h-screen w-full fixed top-0 left-0 z-20 grid items-center px-5;
+  }
+  .modal-bg {
+    @apply bg-[#4D4D4D] bg-opacity-50 fixed h-screen w-full top-0 left-0;
   }
   
   .modal-box {
     background: #FFFFFF;
     box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.185434);
     border-radius: 3px;
+    @apply z-30;
   }
   .modal-btn {
     height: 50px;

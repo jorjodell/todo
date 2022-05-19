@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 
-const AddModal = () => {
+const AddModal = ({ onClose }) => {
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
 
@@ -10,6 +10,7 @@ const AddModal = () => {
 
   return (
     <div className="modal">
+      <button className="modal-bg" onClick={onClose} />
       <section className="modal-box">
         <h1 className="px-7 pt-6 mb-[30px] text-2xl font-bold capitalize">
           Create new tasks
@@ -20,7 +21,7 @@ const AddModal = () => {
             <input 
               placeholder="Write Topic"
               className="w-full"
-              {...register('title', { required: true, minLength: 4, maxLength: 13 })}
+              {...register('title', { required: true })}
             />
             {errors.title && <p className="text-error">Это поле обязательно</p>}
           </label>
@@ -29,7 +30,7 @@ const AddModal = () => {
             <input 
               placeholder="Write Description" 
               className="w-full" 
-              {...register('description', { required: true, minLength: 10 })} 
+              {...register('description', { required: true })} 
             />
             {errors.description && <p className="text-error">Это поле обязательно</p>}
           </label>

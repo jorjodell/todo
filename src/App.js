@@ -15,7 +15,7 @@ function App() {
       </div>
       <div className="filter"></div>
       <div className="list text-big"></div>
-      {openAddModal && <AddModal />}
+      {openAddModal && <AddModal onClose={() => setOpenAddModal(false)} />}
       <Navbar setOpenAddModal={setOpenAddModal} />
     </div>
   );

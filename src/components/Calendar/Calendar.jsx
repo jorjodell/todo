@@ -3,14 +3,13 @@ import dayjs from 'dayjs';
 import css from './calendar.module.css'
 
 const Calendar = () => {
-  const firstDate = dayjs().date(1)
+  const firstDate = dayjs().date(1).weekday(1)
   const dayLen = firstDate.daysInMonth();
   const days = [];
 
   for(let i = 0; i < dayLen; i++) {
     days.push(firstDate.add(i, 'day'))
   }
-
 
   return (
     <div className={css.calendar}>
