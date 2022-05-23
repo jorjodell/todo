@@ -9,7 +9,7 @@ const AddModal = ({ onClose }) => {
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    dispatch(addTodo({ ...data, id: uuid() }));
+    dispatch(addTodo({ ...data, completed: false, id: uuid() }));
     onClose();
   }
 
@@ -38,6 +38,14 @@ const AddModal = ({ onClose }) => {
               {...register('description', { required: true })} 
             />
             {errors.description && <p className="text-error">Это поле обязательно</p>}
+          </label>
+          <label className="block pb-1.5 border-b border-[#979797]">
+            <input
+              type="datetime-local"
+              placeholder="Choose date" 
+              className="w-full" 
+              {...register('date', { required: true })} 
+            />
           </label>
         </div>
         <button className="modal-btn" onClick={handleSubmit(onSubmit)}>

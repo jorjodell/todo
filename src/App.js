@@ -7,7 +7,6 @@ import Todos from './components/Todos'
 
 function App() {
   const [openAddModal, setOpenAddModal] = useState(false);
-  const [todos, setTodos] = useState([])
 
   return (
     <div className="bg-dark-bg min-h-screen pb-24">

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux'
 
 const Todos = () => {
-  const todos = useSelector((state) => state);
+  const todos = useSelector((state) => state.todos);
 
   return (
     <div className="grid gap-4 text-white pt-4">

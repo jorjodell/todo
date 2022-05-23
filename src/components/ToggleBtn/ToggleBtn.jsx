@@ -1,8 +1,14 @@
-import { useState } from "react"
+import { useDispatch, useSelector } from "react-redux";
 import clsx from "clsx";
+import { toggleDaily } from "../../store/filter";
 
 const ToggleBtn = () => {
-  const [isDaily, setIsDaily] = useState(false);
+  const isDaily = useSelector((state) => state.filter.isDaily);
+  const dispatch = useDispatch();
+  
+  const handleChange = () => {
+    dispatch(toggleDaily())
+  }
 
   return (
     <div className="px-11">
@@ -13,7 +19,7 @@ const ToggleBtn = () => {
           "absolute w-1/2 bg-primary rounded-full h-full left-0 transition-transform",
           isDaily && "translate-x-full"
         )} />
-        <input type="checkbox" className="sr-only" onChange={(e) => setIsDaily(e.target.checked)} />
+        <input type="checkbox" className="sr-only" onChange={handleChange} />
         {/* <button
           className={clsx(
             "h-full",
