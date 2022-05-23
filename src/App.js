@@ -10,7 +10,7 @@ function App() {
   const [todos, setTodos] = useState([])
 
   return (
-    <div className="bg-dark-bg min-h-screen">
+    <div className="bg-dark-bg min-h-screen pb-24">
       <div className="logo"></div>
       <ToggleBtn />
       <div className="px-8">

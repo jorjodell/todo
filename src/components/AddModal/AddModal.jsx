@@ -1,12 +1,16 @@
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../../store/todos';
+import { v4 as uuid } from 'uuid'
 
 const AddModal = ({ onClose }) => {
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
+  const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    console.log(data)
+    dispatch(addTodo({ ...data, id: uuid() }));
+    onClose();
   }
 
   return (
